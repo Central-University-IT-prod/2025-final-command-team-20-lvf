@@ -1,0 +1,21 @@
+.feelingLucky {
+  color: white !important;
+  display: flex;
+  position: relative;
+  &:before :global{
+    position: absolute;
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    box-shadow: 0 0 2rem 2rem var(--color-violet);
+    backdrop-filter: blur(2rem);
+    background: var(--color-violet) !important;
+    border-radius: 100rem;
+    z-index: -1;
+  }
+}
+
+.navbar {
+  padding-bottom: var(--safe-area-inset-bottom) !important;
+  bottom: 0 !important;
+}

@@ -1,0 +1,47 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+
+:global {
+  #root {
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem !important;
+    box-sizing: border-box;
+    overflow: scroll;
+  }
+  body.ios {
+    --navbar-height: calc(3.5625rem + var(--safe-area-inset-bottom)); // Navbar height + safe area inset bottom
+  }
+  html {
+    --navbar-height: calc(5.375rem + var(--safe-area-inset-bottom)); // Navbar height + safe area inset bottom
+    --color-violet: #4200b3;
+    --color-blue: #00b3ff;
+    --safe-area-inset-bottom: calc(var(--tg-safe-area-inset-bottom, 0rem) + var(--tg-content-safe-area-inset-bottom, 0rem));
+    --safe-area-inset-top: calc(var(--tg-safe-area-inset-top, 0rem) + var(--tg-content-safe-area-inset-top, 0rem));
+  }
+}

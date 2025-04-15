@@ -1,0 +1,51 @@
+.reels {
+  position: relative;
+  --reel-height: calc(100vh - var(--navbar-height));
+  --reel-height: calc(100dvh - var(--navbar-height));
+  --reel-width: 100vw;
+  height: var(--reel-height);
+  width: var(--reel-width);
+  margin-left: -0.5rem;
+  margin-top: -0.5rem;
+  background: #000000;
+  overflow: hidden;
+}
+
+.reelsHeader {
+  position: absolute;
+  top: var(--safe-area-inset-top);
+  width: 100%;
+  z-index: 3;
+}
+
+.reelsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--reel-width);
+  height: var(--reel-height);
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.reelWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--reel-width);
+  height: var(--reel-height);
+  will-change: transform;
+}
+
+.reelsLoading {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  z-index: 3;
+}
